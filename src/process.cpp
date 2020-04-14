@@ -14,13 +14,12 @@ using std::vector;
 // Added Process Class constructor
 Process::Process(int pid) : pid_(pid) {}
 
-// TODO: Return this process's ID
+// Return this process's ID
 int Process::Pid() {
-  // Could try to use LinuxParser::Pids() returns vector<int>
   return (this->pid_);
 }
 
-// TODO: Return this process's CPU utilization
+// Return this process's CPU utilization
 float Process::CpuUtilization() const {
   float cpu_usage, total_time, seconds;
   string val;
@@ -58,28 +57,27 @@ float Process::CpuUtilization() const {
   return cpu_usage;
 }
 
-// TODO: Return the command that generated this process
+// Return the command that generated this process
 string Process::Command() {
   return LinuxParser::Command(this->pid_);
 }
 
-// TODO: Return this process's memory utilization
+// Return this process's memory utilization
 string Process::Ram() {
   return LinuxParser::Ram(this->pid_);
 }
 
-// TODO: Return the user (name) that generated this process
+// Return the user (name) that generated this process
 string Process::User() {
   return LinuxParser::User(this->pid_);
 }
 
-// TODO: Return the age of this process (in seconds)
+// Return the age of this process (in seconds)
 long int Process::UpTime() {
   return LinuxParser::UpTime(this->pid_);
 }
 
-// TODO: Overload the "less than" comparison operator for Process objects
-// REMOVE: [[maybe_unused]] once you define the function
+// Overload the "less than" comparison operator for Process objects
 bool Process::operator<(Process const& a) const {
   return a.CpuUtilization() < this->CpuUtilization();
 }
