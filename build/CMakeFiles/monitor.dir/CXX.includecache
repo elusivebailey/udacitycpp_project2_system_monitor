@@ -1,0 +1,122 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/format.h
+string
+-
+
+../include/linux_parser.h
+fstream
+-
+regex
+-
+string
+-
+
+../include/ncurses_display.h
+curses.h
+-
+process.h
+../include/process.h
+system.h
+../include/system.h
+
+../include/process.h
+string
+-
+
+../include/processor.h
+
+../include/system.h
+string
+-
+vector
+-
+process.h
+../include/process.h
+processor.h
+../include/processor.h
+
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/format.cpp
+string
+-
+format.h
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/format.h
+
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/linux_parser.cpp
+dirent.h
+-
+unistd.h
+-
+string
+-
+vector
+-
+linux_parser.h
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/linux_parser.h
+
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/main.cpp
+ncurses_display.h
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/ncurses_display.h
+system.h
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/system.h
+
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/ncurses_display.cpp
+curses.h
+-
+chrono
+-
+string
+-
+thread
+-
+vector
+-
+format.h
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/format.h
+ncurses_display.h
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/ncurses_display.h
+system.h
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/system.h
+
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/process.cpp
+unistd.h
+-
+cctype
+-
+sstream
+-
+string
+-
+vector
+-
+process.h
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/process.h
+
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/processor.cpp
+processor.h
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/processor.h
+
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/system.cpp
+unistd.h
+-
+cstddef
+-
+set
+-
+string
+-
+vector
+-
+process.h
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/process.h
+processor.h
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/processor.h
+system.h
+/Users/bgroendy/Documents/Udacity CPP Course/udacitycpp_system_monitor_project/src/system.h
+
