@@ -1,8 +1,11 @@
 #include "processor.h"
 #include "linux_parser.h"
 #include <string>
+#include <vector>
 
 using std::stof;
+using std::string;
+using std::vector;
 
 // Return the aggregate CPU utilization
 float Processor::Utilization() {
@@ -12,16 +15,16 @@ float Processor::Utilization() {
 
   // cpu values = {user, nice, system, idle, iowait, irq, softirq, steal, guest, guest_nice}
   float total_time = 0.0;
-  float user       = stof(v(0));
-  float nice       = stof(v(1));
-  float system     = stof(v(2));
-  float idle       = stof(v(3));
-  float iowait     = stof(v(4));
-  float irq        = stof(v(5));
-  float softirq    = stof(v(6));
-  float steal      = stof(v(7));
-  float guest      = stof(v(8));
-  float guest_nice = stof(v(9));
+  float user       = stof(v[0]);
+  float nice       = stof(v[1]);
+  float system     = stof(v[2]);
+  float idle       = stof(v[3]);
+  float iowait     = stof(v[4]);
+  float irq        = stof(v[5]);
+  float softirq    = stof(v[6]);
+  float steal      = stof(v[7]);
+  float guest      = stof(v[8]);
+  float guest_nice = stof(v[9]);
 
 
   // Guest time is already accounted in usertime, so subtract guest from user time (same with nice)
